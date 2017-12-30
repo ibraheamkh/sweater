@@ -7,7 +7,7 @@ import ListItem from './ListItem';
 class LibraryList extends Component {
     
     componentWillMount() {
-        //setting up the view data on each mountß
+        //setting up the view data on each mount
         const ds = new ListView.DataSource({
             rowHasChanged: (r1, r2) => r1 !== r2
         });

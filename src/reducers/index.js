@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
-import LibraryReducer from './LibraryReducer';
+import AuthReducer from './AuthReducer';
+
+//each reducer represent some state in the application 
 
 export default combineReducers({
-    libraries: LibraryReducer
+    auth: AuthReducer
 });
