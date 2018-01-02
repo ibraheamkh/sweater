@@ -5,7 +5,7 @@ const INITIAL_STATE = { mobile: '' };
 export default (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case MOBILE_CHANGED:
-            return state;
+            return { ...state, mobile: action.payload };
         default:
             return state;
     }

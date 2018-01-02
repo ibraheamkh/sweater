@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Text } from 'react-native';
 import { connect } from 'react-redux';
 import { mobileChanged } from '../actions';
 import { Card, CardSection, Input, Button } from './common';
@@ -17,7 +18,8 @@ class LoginForm extends Component {
                         placeholder={'0566666666'}
                         onChangeText={this.onMobileChange.bind(this)}
                     />
-                    
+                    <Text> Hi st {this.props.mobile} </Text>
+
                     </CardSection>
                     
                     <CardSection>
@@ -32,4 +34,10 @@ class LoginForm extends Component {
     }
 }
 
-export default connect(null, { mobileChanged })(LoginForm);
+const mapStateToProps = state => {
+    return {
+        mobile: state.auth.mobile
+    };
+};
+
+export default connect(mapStateToProps, { mobileChanged })(LoginForm);
