@@ -3,6 +3,7 @@ import { Scene, Router, Actions } from 'react-native-router-flux';
 import LoginForm from './components/LoginForm';
 import BmcList from './components/BmcList';
 import BmcCreate from './components/BmcCreate';
+import BmcEdit from './components/BmcEdit';
 
 //The router is the responsible of moving the app from Scene to another Scene
 //Meaning App Navigation
@@ -45,6 +46,11 @@ const RouterComponent = () => {
                         key="bmcCreate"
                         component={BmcCreate}
                         title="Create BMC"
+                    />
+                    <Scene 
+                        key="bmcEdit"
+                        component={BmcEdit}
+                        title="Edit Bmc"
                     />
                 </Scene>   
             </Scene>

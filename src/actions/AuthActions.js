@@ -44,11 +44,11 @@ export const loginUser = ({ email, password }) => {
             //making the request
             firebase.auth().signInWithEmailAndPassword(email, password)
             .then(user => { // handle sucess request 
-                    console.log(user);
+                  //  console.log(user);
                 loginUserSuccess(dispatch, user);
             })
             .catch((resp) => { // handle failed request
-                console.log('Request Failed' + resp);
+               // console.log('Request Failed' + resp);
                 loginUserFail(dispatch);
             });
     }; 

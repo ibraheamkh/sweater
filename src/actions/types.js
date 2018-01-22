@@ -7,4 +7,7 @@ export const LOGIN_USER = 'login_user';
 
 //---- bmc related action names
 export const BMC_UPDATE = 'bmc_update';
+export const BMC_CREATE = 'bmc_create';
+export const BMC_FETCH_SUCCESS = 'bmc_fetch_success';
+
 

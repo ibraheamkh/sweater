@@ -1,15 +1,20 @@
+import _ from 'lodash';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { bmcUpdate, bmcCreate } from '../actions';
+import { bmcUpdate } from '../actions';
 import { Card, CardSection, Button } from './common';
 import BmcForm from './BmcForm';
 
-class BmcCreate extends Component {
+class BmcEdit extends Component {
 
-    onButtonPress() {
-        const { name, problem, customersSegments } = this.props;
+    // onButtonPress() {
+    //     const { name, problem, customersSegments } = this.props;
         
-        this.props.bmcCreate({ name, problem, customersSegments: customersSegments || 'All' });
+    //     this.props.bmcCreate({ name, problem, customersSegments: customersSegments || 'All' });
+    // }
+
+    componentWillMount() {
+
     }
 
     render() {
@@ -32,4 +37,4 @@ const mapStateToProps = (state) => {
     return { name, problem, customersSegments };
 };
 
-export default connect(mapStateToProps, { bmcUpdate, bmcCreate })(BmcCreate);
+export default connect(mapStateToProps, { bmcUpdate })(BmcEdit);
