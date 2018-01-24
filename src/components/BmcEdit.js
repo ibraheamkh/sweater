@@ -15,6 +15,16 @@ class BmcEdit extends Component {
 
     componentWillMount() {
 
+        _.each(this.props.bmcList, (value, prop) => {
+            this.props.bmcUpdate({ value, prop });
+        });
+
+    }
+
+    onButtonPress() {
+        const { name, problem, customersSegments } = this.props;
+
+        console.log( name, problem, customersSegments);
     }
 
     render() {
